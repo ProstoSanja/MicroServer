@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <style>
+            body {                
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                display: flex;
+                flex-flow: column;
+                margin: 0
+            }
+            .holder {
+                display: flex;
+                flex-flow: row;
+                flex-grow: 1;                
+                flex-wrap: wrap;
+            }
+            .column {
+                display: flex;
+                flex-flow: column;
+                min-width: 175px;
+                flex: 1;
+            }
+            h1 {
+                font-size: 40px;
+                margin: 20px;
+            }
+            h3 {
+                font-size: 30px
+            }
+            p {
+                font-size: 20px;
+                margin: 0;
+            }
+            a {
+                display: block;
+                color: #3388cc;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            iframe {
+                width: 100%;
+                border: 0;
+                bottom: 0;
+            }
+            #calendar {
+                flex-grow: 1;
+            }
+        </style>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <h1>Dashboard</h1>
+        <div class="holder">
+            <div class="column">
+                <h3>University Stuff</h3>
+                <a href="https://sharepoint.gla.ac.uk/students/myglasgow/Pages/MyGlasgow.aspx">MyGlasgow</a>
+                <a href="https://moodle.gla.ac.uk/my/">Moodle</a>
+                <a href="http://127.0.0.1:8888">Jupyter</a>
+                <a href="https://myprinting.gla.ac.uk">Printing</a>
+                <a href="https://learn.gla.ac.uk/yacrs/index.php">Yacrs</a>
+            </div>
+            <div class="column">
+                <h3>Important</h3>
+                <a href="https://mail.google.com">Gmail</a>
+                <a href="https://www.google.com/maps">Maps</a>
+                <a href="https://calendar.google.com/">Calendar</a>
+                <a href="http://localhost/pew.html">Pewdipie/Tseries</a>
+            </div>
+            <div class="column">
+                <h3>Frequent</h3>
+                <a href="https://flightradar24.com">Flightradar24</a>
+                <a href="https://www.delfi.ee">Delfi</a>
+                <a href="https://rus.postimees.ee">Postimees</a>
+                <a href="https://amazon.co.uk">Amazon</a>
+                <p>----------</p>
+                <a href="https://facebook.com">Facebook</a>
+                <a href="https://vk.com">VK</a>
+                <a href="https://www.reddit.com">Reddit</a>
+                <a href="http://ristmikud.tallinn.ee/index.php/cams">TLL Cameras</a>
+            </div>
+            <div class="column">
+                <h3>Travel</h3>
+                <a href="https://www.skyscanner.net/">SkyScanner</a>
+                <a href="https://www.momondo.co.uk/">Momondo</a>
+                <a href="http://www.nationalrail.co.uk/">National Rail</a>
+                <a href="http://localhost/nationalrailoperatorsmapzoom.pdf">Rail Map</a>
+            </div>
+            <div class="column">
+            </div>
+        </div>
+        <iframe src="https://trends.google.com/trends/hottrends/visualize?nrow=1&ncol=5"></iframe>
+    </body>
+</html>
