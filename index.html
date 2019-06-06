@@ -1,99 +1,140 @@
 <html>
-    <head>
-        <title>Dashboard</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <style>
-            body {                
-                text-align: center;
-                font-family: 'Roboto', sans-serif;
-                display: flex;
-                flex-flow: column;
-                margin: 0
-            }
-            .holder {
-                display: flex;
-                flex-flow: row;
-                flex-grow: 1;                
-                flex-wrap: wrap;
-            }
-            .column {
-                display: flex;
-                flex-flow: column;
-                min-width: 175px;
-                flex: 1;
-            }
-            h1 {
-                font-size: 40px;
-                margin: 20px;
-            }
-            h3 {
-                font-size: 30px
-            }
-            p {
-                font-size: 20px;
-                margin: 0;
-            }
-            a {
-                display: block;
-                color: #3388cc;
-                text-decoration: none;
-                font-size: 20px;
-            }
-            iframe {
-                width: 100%;
-                border: 0;
-                bottom: 0;
-            }
-            #calendar {
-                flex-grow: 1;
-            }
-        </style>
-        <script>
-            
-        </script>
-    </head>
-    <body>
-        <h1>Dashboard</h1>
-        <div class="holder">
-            <div class="column">
-                <h3>University Stuff</h3>
-                <a href="https://sharepoint.gla.ac.uk/students/myglasgow/Pages/MyGlasgow.aspx">MyGlasgow</a>
-                <a href="https://moodle.gla.ac.uk/my/">Moodle</a>
-                <a href="http://127.0.0.1:8888">Jupyter</a>
-                <a href="https://myprinting.gla.ac.uk">Printing</a>
-                <a href="https://learn.gla.ac.uk/yacrs/index.php">Yacrs</a>
-            </div>
-            <div class="column">
-                <h3>Important</h3>
-                <a href="https://mail.google.com">Gmail</a>
-                <a href="https://www.google.com/maps">Maps</a>
-                <a href="https://calendar.google.com/">Calendar</a>
-                <a href="http://localhost/pew.html">Pewdipie/Tseries</a>
-            </div>
-            <div class="column">
-                <h3>Frequent</h3>
-                <a href="https://flightradar24.com">Flightradar24</a>
-                <a href="https://www.delfi.ee">Delfi</a>
-                <a href="https://rus.postimees.ee">Postimees</a>
-                <a href="https://amazon.co.uk">Amazon</a>
-                <p>----------</p>
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://vk.com">VK</a>
-                <a href="https://www.reddit.com">Reddit</a>
-                <a href="http://ristmikud.tallinn.ee/index.php/cams">TLL Cameras</a>
-                <a href="https://flights.tll.aero/all2/">TLL Airport</a>
-            </div>
-            <div class="column">
-                <h3>Travel</h3>
-                <a href="https://www.skyscanner.net/">SkyScanner</a>
-                <a href="https://www.momondo.co.uk/">Momondo</a>
-                <a href="http://www.nationalrail.co.uk/">National Rail</a>
-                <a href="http://localhost/nationalrailoperatorsmapzoom.pdf">Rail Map</a>
-            </div>
-            <div class="column">
-                <!-- <iframe id="calendar" src="YOUR GOOGLE CALENDAR EMBED"></iframe>-->
-            </div>
+
+<head>
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-flow: column;
+            margin: 0
+        }
+
+        .holder {
+            display: flex;
+            flex-flow: row;
+            flex-grow: 1;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            display: flex;
+            flex-flow: column;
+            min-width: 175px;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 20px;
+        }
+
+        h3 {
+            font-size: 30px
+        }
+
+        p {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        a {
+            display: block;
+            color: #3388cc;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            border: 0;
+            bottom: 0;
+        }
+
+        #calendar {
+            flex-grow: 1;
+        }
+        #ipadr {
+            position: absolute;
+            right: 0;
+            padding: 20px;
+            padding-right: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dashboard</h1>
+    <p id="ipadr">Error</p>
+    <div class="holder">
+        <div class="column">
+            <h3>University Stuff</h3>
+            <a href="https://sharepoint.gla.ac.uk/students/myglasgow/Pages/MyGlasgow.aspx">MyGlasgow</a>
+            <a href="https://moodle.gla.ac.uk/my/">Moodle</a>
+            <a href="http://127.0.0.1:8888">Jupyter</a>
+            <a href="https://myprinting.gla.ac.uk">Printing</a>
+            <a href="https://learn.gla.ac.uk/yacrs/index.php">Yacrs</a>
+            <a href="https://classresponse.gla.ac.uk">Classresponse</a>
         </div>
-        <iframe src="https://trends.google.com/trends/hottrends/visualize?nrow=1&ncol=5"></iframe>
-    </body>
+        <div class="column">
+            <h3>Important</h3>
+            <a href="https://mail.google.com">Gmail</a>
+            <a href="https://drive.google.com">Drive</a>
+            <a href="https://www.google.com/maps">Maps</a>
+            <a href="https://calendar.google.com/">Calendar</a>
+            <a href="http://localhost/laundry.html">Laundry</a>
+            <p>----------</p>
+            <a href="https://localhost">Localhost https</a>
+            <a href="http://localhost:3000">Localhost 3000</a>
+            <a href="http://localhost:8080">Localhost 8080</a>
+        </div>
+        <div class="column">
+            <h3>Frequent</h3>
+            <a href="https://fr24.com">Flightradar24</a>
+            <a href="https://www.delfi.ee">Delfi</a>
+            <a href="https://rus.postimees.ee">Postimees</a>
+            <a href="https://amazon.co.uk">Amazon</a>
+            <p>----------</p>
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://vk.com">VK</a>
+            <a href="https://www.reddit.com">Reddit</a>
+            <a href="http://ristmikud.tallinn.ee/index.php/cams">TLL Cameras</a>
+            <a href="https://flights.tll.aero/all2/">TLL Airport</a>
+        </div>
+        <div class="column">
+            <h3>Travel</h3>
+            <a href="https://www.skyscanner.net/">SkyScanner</a>
+            <a href="https://www.momondo.co.uk/">Momondo</a>
+            <a href="http://www.nationalrail.co.uk/">National Rail</a>
+            <a href="http://localhost/nationalrailoperatorsmapzoom.pdf">Rail Map</a>
+        </div>
+        <div class="column">
+            <iframe id="calendar"
+                src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=foralwork%40gmail.com&amp;color=%232952A3&amp;src=addressbook%23contacts%40group.v.calendar.google.com&amp;color=%2328754E&amp;src=en.ee%23holiday%40group.v.calendar.google.com&amp;color=%230F4B38&amp;src=4q3b27mfk54pe5bl3bpmhval8nb6ar85%40import.calendar.google.com&amp;color=%236B3304&amp;src=rdv5rgfjuna6l2a7hsfn1fomh18l5jnr%40import.calendar.google.com&amp;color=%2342104A&amp;ctz=Europe%2FLondon"
+                style="border-width:0" frameborder="0" scrolling="no"></iframe> <!–– sed '/#ignoreline$/ d' -->
+            <!-- <iframe id="calendar" src="YOUR GOOGLE CALENDAR EMBED"></iframe>-->
+        </div>
+    </div>
+    <iframe src="https://trends.google.com/trends/hottrends/visualize?nrow=1&ncol=5"></iframe>
+    <script>
+        window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window
+            .webkitRTCPeerConnection; //compatibility for Firefox and chrome
+        var pc = new RTCPeerConnection({
+                iceServers: []
+            }), noop = function () {};
+        pc.createDataChannel(''); //create a bogus data channel
+        pc.createOffer(pc.setLocalDescription.bind(pc), noop); // create offer and set local description
+        pc.onicecandidate = function (ice) {
+            if (ice && ice.candidate && ice.candidate.candidate) {
+                var myIP = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/.exec(ice.candidate
+                    .candidate)[1];
+                document.getElementById('ipadr').innerHTML = 'IP: ' + myIP;
+                pc.onicecandidate = noop;
+            }
+        };
+    </script>
+</body>
+
 </html>

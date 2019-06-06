@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Death dashboard</title>
+        <style>
+            p {
+                font-size: 100px;
+                padding-left: 20px;
+            }
+        </style>
+        <script>
+            function sendReq() {
+                var oReq = new XMLHttpRequest();
+                oReq.addEventListener("load", responselistener);
+                oReq.open("GET", "https://358n2fyyol.execute-api.eu-west-1.amazonaws.com/prod/api/v1/search/cs3/402940?full=Y");
+                oReq.send();
+            }
+
+            function responselistener () {
+                var response = JSON.parse(this.responseText);
+
+                var text = ""
+                response.site.room.apps.forEach(app => {
+                    text += app.t + "-" + app.lbl + ": " + app.st + "<br/>";
+                });
+                document.getElementById("status").innerHTML = text;
+            }
+
+            function compute() {
+                sendReq();
+                setTimeout(compute, 2000);
+            }
+            compute();
+        </script>
+    </head>
+    <body>
+        <p id="status"></p>
+        <p>I-IDLE</p>
+        <p>A-ACTIVE(OCCUPIED)</p>
+        <script>
+            console.log("LOL");
+        </script>
+    </body>
+</html>
